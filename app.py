@@ -1,14 +1,14 @@
 from flask import Flask, request
 import requests
 
-TOKEN = '7968583463:AAFcqxbNbXdaTYxaaQZGnoG3-mGLu3prx4E'  # ganti dengan token bot kamu
+TOKEN = '7968583463:AAFcqxbNbXdaTYxaaQZGnoG3-mGLu3prx4E'  # ganti dengan token kamu
 URL = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Bot is alive!'
+    return 'Bot aktif di Glitch!'
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -20,7 +20,7 @@ def webhook():
         if text.startswith('?s '):
             query = text[3:]
             reply = f"Hasil pencarian untuk: {query}"
-            # nanti tambahin logic scraping di sini
+            # Tambah scraping decanime di sini
         else:
             reply = "Gunakan format: ?s judul"
 
