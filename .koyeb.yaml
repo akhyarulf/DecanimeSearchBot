@@ -1,5 +1,0 @@
-name: telegram-bot
-routes:
-  - path: /
-    port: 8080
-    target_port: 5000
